@@ -1,6 +1,5 @@
 package com.test;
 
-
 //import javax.faces.bean.ManagedBean;
 import org.apache.log4j.Logger;
 
