@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="error">
-    <Properties>
+    <!--  Properties>
         <Property name="basePath">${env:LogFilePath}</Property>
-        <!-- Property name="basePath"></Property -->
-    </Properties> 
+    </Properties --> 
 
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n" />
 		</Console>
  
-		<RollingFile name="RollingFile" filename="${basePath}/my-app.log"
+		<!--  RollingFile name="RollingFile" filename="${basePath}/my-app.log"
 			filepattern="${basePath}/%d{YYYYMMddHHmmss}-my-app.log">
 			<PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n" />
 			<Policies>
 				<SizeBasedTriggeringPolicy size="100 MB" />
 			</Policies>
 			<DefaultRolloverStrategy max="20" />
-		</RollingFile>
+		</RollingFile -->
  
  		<Socket name="Graylog" protocol="tcp" host="t30lap212.grupa.lukas" port="12201">
  			<GelfLayout host="rskica2" compressionType="OFF" />
@@ -27,7 +26,7 @@
 	<Loggers>
 		<Root level="error">
 			<AppenderRef ref="Console" />
-			<AppenderRef ref="RollingFile" />
+			<!-- AppenderRef ref="RollingFile" /-->
 			<AppenderRef ref="Graylog" />
 		</Root>
 	</Loggers>
