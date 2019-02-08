@@ -18,7 +18,7 @@
 			<DefaultRolloverStrategy max="20" />
 		</RollingFile -->
  
- 		<Socket name="Graylog" protocol="tcp" host="t30lap212.grupa.lukas" port="12201">
+ 		<Socket name="Graylog" protocol="udp"  host="t30lap212.grupa.lukas" port="12201">
  			<GelfLayout host="rskica2" compressionType="OFF" />
  		</Socket>	
  
