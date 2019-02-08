@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="error">
     <Properties>
-        <Property name="basePath">${sys:LogFilePath}</Property>
+        <Property name="basePath">${env:LogFilePath}</Property>
         <!-- Property name="basePath"></Property -->
     </Properties> 
-<!-- Author:  Crunchify.com  -->
+
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n" />

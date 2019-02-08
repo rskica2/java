@@ -34,6 +34,7 @@ public class MyBean1 {
 		   }
 			
 		   public String getMessage() {
-		      return "my-app started (JSF 2.1) + GELF!";
+		      return "my-app started (JSF 2.1)!";
 		   }
+
 }
